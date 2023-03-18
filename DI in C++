@@ -1,0 +1,34 @@
+#include<iostream>
+#include<stdlib.h>
+#include<unistd.h>
+
+using namespace std;
+int main()
+{
+    int hr=0,minu=0,sec=0;
+    while(true)
+    {
+        system("cls");
+        cout<<"\n****************\n";
+        cout<<hr<<" : "<<minu<<" : "<<sec<<endl;
+        cout<<"*****************";
+       sec++;
+       if(sec==60)
+       {
+           minu++;
+           sec=0;
+           if(minu==60)
+           {
+               hr++;
+               minu=0;
+            if(hr==60)
+            {
+                hr=0;
+            }
+           }
+       }
+       sleep(1);
+    }
+
+}
+
